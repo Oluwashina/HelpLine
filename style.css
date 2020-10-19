@@ -184,4 +184,10 @@ padding: 50px 70px 30px 30px;
     .just_click{
         margin-top: 10px;
     }
+    .register_box{
+        background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+    padding: 50px 30px 30px 30px;
+    }
 }
