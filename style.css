@@ -123,6 +123,60 @@ height: 145px;
     height: 145px;
 }
 
+/* protest styles */
+.protest{
+    font-size: 50px;
+    font-weight: 800;
+    margin-top: 70px;
+}
+
+/* tell the world styles */
+.tell_heading{
+    font-size: 45px;
+    font-weight: 800;
+}
+.tell_text{
+    color: #2ECC71;
+    font-weight: 600;
+    font-size: 45px;
+    margin-top: 65px;
+}
+
+/* message box */
+.message-box{
+    background: #EBFCE7;
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+.message-text{
+    padding: 40px 40px;
+}
+
+
+
+
+
+/* register styles */
+.register_box{
+    background: #FFFFFF;
+border-radius: 8px;
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+padding: 50px 70px 30px 30px;
+}
+.register_heading{
+    color: #2ECC71;
+    font-weight: 700;
+}
+.input-style{
+    padding: 20px 20px;
+    background: #F9F9F9;
+    border: none;
+}
+.input-style:focus {
+    border: none;
+    box-shadow: 0px 5px 30px rgba(50, 54, 67, 0.2);
+    outline: 0 none;
+  }
 
 /* Media query */
 

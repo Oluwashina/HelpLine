@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpLine - Register</title>
+    <!-- favicon -->
+
+     <!-- fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+     <!-- icons -->
+     <link href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css" rel="stylesheet">
+     <!-- bootstrap -->
+     <link href="bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    
+
+    <!-- Navigtion bar section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand mt-1" href="#" style="font-weight: 800; color: #434343;">
+               HELP<span style="font-weight: normal;">LINE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-lg-2 mt-1">
+                  <a class="nav-link" id="nav-color" href="#">Log in <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item px-lg-2 mt-1">
+                  <a class="nav-link" id="nav-color" href="#">Register </a>
+                </li>
+                <li class="nav-item px-lg-2 mt-1">
+                  <a class="nav-link nav-color" id="nav-color" href="#">Help</a>
+                </li>
+                <li class="nav-item px-lg-2 py-1">
+                    <a class="nav-link soro" href="#" style="color: white; font-weight: 600;">SoroSoke</a>
+                  </li>
+              </ul>
+            </div>
+        </div> 
+    </nav>
+
+    <!-- end of navigation section -->
+
+ 
+    <!-- register design -->
+    <section style="margin-top: 50px;" class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="register_box">
+                        <h2><span class="register_heading">Register</span> for FREE!</h2>
+                        <!-- firstname and lastname -->
+                        <form>
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control input-style" id="firstName" placeholder="Firstname" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control input-style" id="lastName" placeholder="Lastname" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- email -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group ">
+                                    <input type="email" class="form-control input-style" id="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- phone and username-->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-style" id="phone" placeholder="Phone" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-style" id="username" placeholder="Username" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- passowrd and confirm passwrd -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-style" id="pasword" placeholder="Password" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-style" id="confirm" placeholder="Confirm Password" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button class="register_btn">Register</button>
+                        </div>
+                        </form>
+                        
+
+                        <div class="text-center mt-2">
+                            <p style="font-weight: 400;">Already have an account? <span style="font-style: italic;"><a href="#" style="color: #1F1F1F; text-decoration: none;">Click here to login</a></span></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-md-block ">
+                    <div class="text-center ">
+                        <img src="img/voice.png" class="" height="490">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="dist/jquery.min.js"></script>
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
