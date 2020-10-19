@@ -168,7 +168,7 @@ padding: 50px 70px 30px 30px;
     font-weight: 700;
 }
 .input-style{
-    padding: 20px 20px;
+    padding: 25px 20px;
     background: #F9F9F9;
     border: none;
 }
@@ -178,6 +178,16 @@ padding: 50px 70px 30px 30px;
     outline: 0 none;
   }
 
+  /* login styles */
+  .login_box{
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1); 
+    padding: 50px 25px 30px 30px;
+  }
+.login_pad{
+    padding: 0px;
+}
 /* Media query */
 
 @media (max-width: 767px) { 
@@ -189,5 +199,9 @@ padding: 50px 70px 30px 30px;
     border-radius: 8px;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
     padding: 50px 30px 30px 30px;
+    }
+    .login_pad{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
