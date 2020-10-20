@@ -64,8 +64,11 @@
                                 <input type="text" class="form-control input-style" id="username" placeholder="Username or Email" required>
                             </div>
                         
-                            <div class="form-group" style="margin-top: 30px;">
+                            <div class="form-group secret" style="margin-top: 30px;">
                                 <input type="password" class="form-control input-style" id="password" placeholder="Password" required>
+                                <div class="password_icon">
+                                    <i class="mdi mdi-eye-off" id="icon" onClick="togglepassword()"></i>  
+                                </div>
                             </div>
 
                             <p style="font-style: italic;">Forgot Password?</p>
@@ -182,5 +185,17 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    <script>
+       function togglepassword(){
+           var x = document.getElementById("password");
+           if (x.type === "password") {
+                x.type = "text";
+                $('#icon').removeClass("mdi mdi-eye-off").addClass('mdi mdi mdi-eye')
+            } else {
+                x.type = "password";
+                $('#icon').removeClass("mdi mdi-eye").addClass('mdi mdi mdi-eye-off')
+            }
+       }    
+    </script>
 </body>
 </html>

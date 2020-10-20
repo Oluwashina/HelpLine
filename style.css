@@ -109,7 +109,11 @@ body{
 }
 
 .section-adjust{
-    margin-top: 80px;
+    margin-top: 100px;
+}
+
+.thumb{
+    margin-top: 100px;
 }
 
 
@@ -232,6 +236,19 @@ padding: 50px 70px 30px 30px;
 .login_pad{
     padding: 0px;
 }
+
+.secret {
+    position: relative;
+  }
+
+.password_icon {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    color:  #2ECC71;
+    cursor: pointer;
+    font-size: 20px;
+  }
 /* Media query */
 
 @media (max-width: 767px) { 
@@ -247,5 +264,8 @@ padding: 50px 70px 30px 30px;
     .login_pad{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .thumb{
+        margin-top: 50px;
     }
 }
