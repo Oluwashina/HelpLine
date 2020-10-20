@@ -13,7 +13,7 @@
      <!-- bootstrap -->
      <link href="bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="style.css" rel="stylesheet">
-
+     <link rel="stylesheet" href="iziToast-master/dist/css/iziToast.min.css">
 </head>
 <body>
     
@@ -21,7 +21,7 @@
     <!-- Navigtion bar section -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand mt-1" href="#" style="font-weight: 800; color: #434343;">
+            <a class="navbar-brand mt-1" href="index.html" style="font-weight: 800; color: #434343;">
                HELP<span style="font-weight: normal;">LINE</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,18 +97,21 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password" class="form-control input-style" id="pasword" placeholder="Password" required>
+                                    <input type="password" class="form-control input-style" id="password" placeholder="Password" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="password" class="form-control input-style" id="confirm" placeholder="Confirm Password" required>
+                                  
+                                    <input type="password" class="form-control input-style" id="confirmPassword" placeholder="Confirm Password" required>
+                                     <span id="passwordField" class="error">Password doesn't match!!!</span>
                                 </div>
+                              
                             </div>
                         </div>
 
                         <div class="text-center mt-3">
-                            <button class="register_btn">Register</button>
+                            <button id="register" class="register_btn">Register</button>
                         </div>
                         </form>
 
@@ -120,8 +123,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-md-block ">
-                    <div class="text-center ">
-                        <img src="img/voice.png" class="" height="498">
+                    <div class="text-center">
+                        <img src="img/voice.png" class="" height="538">
                     </div>
                 </div>
             </div>
@@ -131,7 +134,7 @@
 
 
 
-
+   
 
 
 
@@ -141,5 +144,101 @@
 
     <script src="dist/jquery.min.js"></script>
     <script src="bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+    <script src="lib/viewdata.js"></script>
+    <script src="iziToast-master/dist/js/iziToast.min.js"></script>
+    <script>
+       $(document).ready(function(){
+
+                    // register functionality
+                  $("form").submit(function(event) {
+                    event.preventDefault()
+                    var view_data = new ViewData();
+                    var signup_function = "members";
+                    var url = view_data.ControllerRouteURL + signup_function;
+
+                    var firstName = $("#firstName").val();
+                    var lastName = $("#lastName").val();
+                    var username = $('#username').val();
+                    var email = $("#email").val();
+                    var phone = $('#phone').val()
+                    var password = $('#password').val();
+                    var confirmPassword = $('#confirmPassword').val();
+                    var error_msg = $('#passwordField');
+
+                    if(password !== confirmPassword){
+                        error_msg.removeClass("error").addClass("error_show")  
+                    }
+                    else{
+
+                        var data = {
+                        firstname: firstName,
+                        lastname: lastName,
+                        username: username,
+                        email: email,
+                        password: password
+                        }
+
+                    error_msg.removeClass("error_show").addClass("error")
+
+                    
+                $.ajax({
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        url: url,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: 'json',
+                    beforeSend: function(jqXHR, settings) {
+                        $('#register').attr('disabled', true)
+                    },
+                    success: function(data) {
+                        console.log(data)
+
+                        $('#register').attr('disabled', false)
+
+                        iziToast.success({
+                            message: 'Registration Successful, Login to continue',
+                            progressBar: false,
+                            position: 'topRight'
+                        });
+
+                        $("#firstName").val('');
+                        $("#lastName").val('');
+                        $("#username").val('');
+                        $("#email").val('');
+                        $("#confirmPassword").val('');
+                        $("#password").val('');
+                        $('#phone').val('')
+
+                    },
+                    error: function(data){ 
+                        iziToast.error({
+                            message: 'User with this email already exist.',
+                            progressBar: false,
+                            position: 'topRight'
+                        });
+
+                    },
+                    complete: function(jqXHR) {
+                        if (jqXHR.status != '200') {
+                            var obj = $.parseJSON(jqXHR.responseText);
+                        }
+                        $('#register').attr('disabled', false)
+                    }
+                })
+
+                }
+
+                })
+                // on form submit
+
+            //validate amount
+            $('#confirmPassword').on('input', function() {
+                var error_msg = $('#passwordField');
+                error_msg.removeClass("error_show").addClass("error")
+            });  
+        
+         
+        })
+    </script>
 </body>
 </html>
