@@ -92,6 +92,10 @@ body{
   vertical-align: middle;
   outline:  0 none;
 }
+.register_btn:hover{
+    color: white;
+}
+
 .register_btn:focus{
     outline: 0 none;
 }
