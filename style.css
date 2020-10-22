@@ -172,6 +172,17 @@ height: 145px;
     padding: 10px 40px;
 }
 
+.select-style{
+    background: #F9F9F9;
+    border: none;
+    padding: 10px 20px;
+}
+
+.select-style:focus {
+    border: none;
+    box-shadow: 0px 5px 30px rgba(50, 54, 67, 0.2);
+    outline: 0 none;
+  }
 
 /* tell the world styles */
 .tell_heading{
