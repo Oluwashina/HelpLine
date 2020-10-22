@@ -163,6 +163,14 @@ height: 145px;
     margin-top: 70px;
 }
 
+.states:nth-child(odd){
+    background: #F3F3F3;
+    padding: 10px 40px;
+}
+
+.states{
+    padding: 10px 40px;
+}
 
 
 /* tell the world styles */

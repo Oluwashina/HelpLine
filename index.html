@@ -60,62 +60,10 @@
                
 
                <!-- list of all states -->
-               <div class="" style="background:  #F3F3F3; padding: 10px 40px;">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                    <label class="form-check-label ml-3" for="exampleRadios1" >
-                      Lagos
-                    </label>
-                </div>
-                </div>
-                <div style="padding: 10px 40px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                        <label class="form-check-label ml-3" for="exampleRadios1">
-                        Ondo
-                        </label>
-                </div>
-                </div>
-                <div style="background:  #F3F3F3; padding: 10px 40px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                        <label class="form-check-label ml-3" for="exampleRadios1">
-                        Oyo
-                        </label>
-                </div>
-                </div>
-                <div style="padding: 10px 40px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                        <label class="form-check-label ml-3" for="exampleRadios1">
-                        Ekiti
-                        </label>
-                </div>
-                    </div>
-                <div style="background:  #F3F3F3; padding: 10px 40px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-                        <label class="form-check-label ml-3" for="exampleRadios1">
-                        Osun
-                        </label>
-                </div>
-                </div>
-                <div style="padding: 10px 40px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-                        <label class="form-check-label ml-3" for="exampleRadios1">
-                        Kogi
-                        </label>
-                </div>
-                </div>
-                <div style="background:  #F3F3F3; padding: 10px 40px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                        <label class="form-check-label ml-3" for="exampleRadios1">
-                        Kwara
-                        </label>
-                </div>
-                </div>
+               <div id="states">
+
+               </div>
+            
     
             <!-- end of list for all states -->
         </div>
@@ -187,7 +135,7 @@
                             <div class="col-6 pt-5 pl-5 pb-5">
                                 <div class="features_legal" style="cursor: pointer;" onclick="Legal()">
                                     <img class="mt-3" src="img/legal.svg" width="40" height="40">
-                                    <p class="mt-2 mb-0" style="color: #F18343; font-weight: 600">Legal Help</p>
+                                    <p class="mt-2 mb-0" style="color: #F18343; font-weight: 600">Legal</p>
                                     <a style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
                                 </div>
                             </div>
@@ -318,7 +266,30 @@
 
         $(document).ready(function(){
             geolocation()
-        })
+
+
+            // populates the nigerian states
+            $.getJSON("states.json", function(data){
+                for(i = 0; i < data.length; i++){
+                    var result = data[i]
+                    var statesDiv = `<div class="states">
+                                     <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                        <label class="form-check-label ml-3" for="exampleRadios1" >
+                                            ${result}
+                                        </label>
+                                    </div>
+                                    </div>`
+
+                    $('#states').append(statesDiv);
+
+                 }
+
+            }).fail(function(){
+                console.log("An error has occurred.");
+            });
+
+            })
 
 
         // security functionality
