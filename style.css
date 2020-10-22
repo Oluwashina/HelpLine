@@ -163,18 +163,7 @@ height: 145px;
     margin-top: 70px;
 }
 
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -3px;
-    left: -1px;
-    position: relative;
-    background-color: #2ECC71;
-    content: '';
-    display: inline-block;
-    visibility: visible;  
-}
+
 
 /* tell the world styles */
 .tell_heading{
