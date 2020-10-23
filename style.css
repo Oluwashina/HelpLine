@@ -123,6 +123,10 @@ body{
 
 .just_click{
     margin-top: 40px;
+    font-weight: 800;
+     line-height: 65px;
+     letter-spacing: -2px; 
+     font-size: 56px;
 }
 
 /* Features of helpline design */
@@ -279,6 +283,10 @@ padding: 50px 70px 30px 30px;
 @media (max-width: 767px) { 
     .just_click{
         margin-top: 5px;
+        font-weight: 800;
+        line-height: 35px;
+        letter-spacing: -2px; 
+        font-size: 35px;
     }
     .register_box{
         background: #FFFFFF;
