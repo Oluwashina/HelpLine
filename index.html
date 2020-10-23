@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand mt-1" href="index.html">
-                <img src="img/logo.png" class="" alt="" loading="lazy">
+                <img src="img/helpline_logo.svg" class="" width="150" height="50" alt="" loading="lazy">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
 
     <!-- modal for security -->
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="securityModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content" style="background: #FFFFFF; border-radius: 8px; height: 400px;">
         <div class="modal-body pb-5" style="padding: 0px;">
@@ -80,6 +80,108 @@
   </div>
 
     <!-- end of of modal for security -->
+
+    
+
+    <!-- Modal for Ambulance -->
+    <div class="modal fade" id="ambulanceModal" tabindex="-1" aria-labelledby="ambulanceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content" style="background: #FFFFFF; border-radius: 8px; height: 400px;">
+            <div class="modal-body pb-5" style="padding: 0px;">
+                <div style="padding: 30px 20px 5px 40px;">
+                    <div class="ambulanceBack">
+                        <i class="mdi mdi-arrow-left" onclick="backAmbulance()" style="cursor: pointer;"></i><span class="ml-2">Back</span>
+                    </div>
+                  
+                    <h3 class="ambulanceHead mt-3" style="color: #434343; line-height: 40px; font-weight: 800;">What State<br> are you? <span style="font-size: 16px; color: #03A9F4; font-weight: 600">Ambulance</span></h3> 
+                   </div>
+                   
+    
+                   <!-- list of all states -->
+                   <div id="ambulanceStates">
+                   
+                   </div>
+                
+        
+                <!-- end of list for all states -->
+            </div>
+    
+           
+          
+          
+          </div>
+        </div>
+      </div>
+
+    <!-- End of modal for amubulance -->
+
+    <!-- Modal for legal help -->
+    <div class="modal fade" id="legalModal" tabindex="-1" aria-labelledby="legalModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content" style="background: #FFFFFF; border-radius: 8px; height: 400px;">
+            <div class="modal-body pb-5" style="padding: 0px;">
+                <div style="padding: 30px 20px 5px 40px;">
+                    <div class="legalBack">
+                        <i class="mdi mdi-arrow-left" onclick="backLegal()" style="cursor: pointer;"></i><span class="ml-2">Back</span>
+                    </div>
+                  
+                    <h3 class="legalHead mt-3" style="color: #434343; line-height: 40px; font-weight: 800;">What State<br> are you? <span style="font-size: 16px; color: #03A9F4; font-weight: 600">Legal</span></h3> 
+                   </div>
+                   
+    
+                   <!-- list of all states -->
+                   <div id="legalStates">
+                   
+                   </div>
+                
+        
+                <!-- end of list for all states -->
+            </div>
+    
+           
+          
+          
+          </div>
+        </div>
+      </div>
+
+    <!-- End of modal for legal help -->
+
+
+    <!-- start of modal for first aid -->
+    <div class="modal fade" id="aidModal" tabindex="-1" aria-labelledby="aidModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content" style="background: #FFFFFF; border-radius: 8px; height: 400px;">
+            <div class="modal-body pb-5" style="padding: 0px;">
+                <div style="padding: 30px 20px 5px 40px;">
+                    <div class="aidBack">
+                        <i class="mdi mdi-arrow-left" onclick="backAid()" style="cursor: pointer;"></i><span class="ml-2">Back</span>
+                    </div>
+                  
+                    <h3 class="aidHead mt-3" style="color: #434343; line-height: 40px; font-weight: 800;">What State<br> are you? <span style="font-size: 16px; color: #03A9F4; font-weight: 600">First AID</span></h3> 
+                   </div>
+                   
+    
+                   <!-- list of all states -->
+                   <div id="aidStates">
+                   
+                   </div>
+                
+        
+                <!-- end of list for all states -->
+            </div>
+    
+           
+          
+          
+          </div>
+        </div>
+      </div>
+
+    <!-- end of modal for first aid -->
+
+ 
+
 
     <!-- section one -->
     <section>
@@ -122,14 +224,14 @@
                                 <div class="features_security" style="cursor: pointer;">
                                         <img class="mt-3" src="img/security.svg" width="30" height="30">
                                         <p class="mt-2 mb-0" style="color: #03A9F4; font-weight: 600">Security</p>
-                                        <a  data-toggle="modal" data-target="#exampleModal" style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
+                                        <a  data-toggle="modal" data-target="#securityModal" style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
                                 </div>
                             </div>
                             <div class="col-6 pt-5 pr-5">
-                                <div class="features_ambulance" style="cursor: pointer;" onclick="Ambulance()">
+                                <div class="features_ambulance" style="cursor: pointer;">
                                     <img class="mt-3" src="img/ambulance.svg" width="30" height="30">
                                     <p class="mt-2 mb-0" style="color: #F44336; font-weight: 600">Ambulance</p>
-                                    <a id="secure" style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
+                                    <a data-toggle="modal" data-target="#ambulanceModal"  style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
                                 </div>
                             </div>
                         </div>
@@ -137,17 +239,17 @@
                         <!-- second row -->
                         <div class="row">
                             <div class="col-6 pt-5 pl-5 pb-5">
-                                <div class="features_legal" style="cursor: pointer;" onclick="Legal()">
+                                <div class="features_legal" style="cursor: pointer;" >
                                     <img class="mt-3" src="img/legal.svg" width="40" height="40">
                                     <p class="mt-2 mb-0" style="color: #F18343; font-weight: 600">Legal</p>
-                                    <a style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
+                                    <a data-toggle="modal" data-target="#legalModal" style="text-decoration: none; font-style: italic; font-size: 14px; font-weight: 600; color: #8C8C8C;">Click here</a>
                                 </div>
                             </div>
                             <div class="col-6 pt-5 pr-5 pb-5">
-                                <div class="features_aid" style="cursor: pointer;" onclick="AID()">
+                                <div class="features_aid" style="cursor: pointer;">
                                     <img class="mt-4" src="img/first-aid-bag-outline.svg" width="30" height="30">
                                     <p class="mt-2 mb-0" style="color: #2ECC71; font-weight: 600">First AID</p>
-                                    <a style="text-decoration: none; font-style: italic; font-size: 14px; color: #8C8C8C; font-weight: 600;">Click here</a>
+                                    <a data-toggle="modal" data-target="#aidModal" style="text-decoration: none; font-style: italic; font-size: 14px; color: #8C8C8C; font-weight: 600;">Click here</a>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +282,7 @@
 
     
     <!-- protesters view  -->
-    <section class="protest-adjust">
+    <!-- <section class="protest-adjust">
         <div class="container"> 
         <div class="row">
             <div class="col-lg-6">
@@ -197,11 +299,11 @@
         </div>
         </div>
 
-    </section>
+    </section> -->
 
 
     <!-- tell the world what is happening -->
-    <section class="section-adjust">
+    <section class="protest-adjust">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -272,14 +374,19 @@
         $(document).ready(function(){
             geolocation()
             GetStates()
+            GetStatesAmbulance()
+            GetStatesLegal()
+            GetStatesAid()
 
             $('.back_icon').hide()
+            $('.ambulanceBack').hide()
+            $('.legalBack').hide()
            
 
         })
 
 
-            // Radio button check functionality
+     // Radio button check functionality -------- SECURITY ZONE -----------------
             function Change(){
                var state =  $("input[name='states']:checked").val();
                console.log(state)
@@ -367,16 +474,287 @@
             });
         }
 
-        // security functionality
-        function Ambulance(){
-            $('#secure').attr("href", "tel:+2348113116858")
+//  ------------- END OF SECURITY ZONE ---------------------------------
+
+        // ----------------- AMBULANCE ZONE -----------------------
+        // get states for ambulance
+        function GetStatesAmbulance(){
+             // populates the nigerian states
+             $.getJSON("states.json", function(data){
+                $('#ambulanceStates').empty()  
+                $('.ambulanceBack').hide()
+                for(i = 0; i < data.length; i++){
+                    var result = data[i]
+                    var statesDiv = `<div class="states">
+                                     <div class="form-check">
+                                        <input class="form-check-input" onchange="ChangeAmbulance()" type="radio" name="ambulance" id="ambulance" value="${result}">
+                                        <label class="form-check-label ml-3" for="ambulance" >
+                                            ${result}
+                                        </label>
+                                    </div>
+                                    </div>`
+
+                    $('#ambulanceStates').append(statesDiv);
+
+                 }
+
+            }).fail(function(){
+                console.log("An error has occurred.");
+            });
         }
+
+        function ChangeAmbulance(){
+            var state =  $("input[name='ambulance']:checked").val();
+               console.log(state)
+               $('.ambulanceHead').html(`<h3 style="color: #434343; line-height: 40px; font-weight: 800;">Showing results<br> ${state} State <span style="font-size: 16px; color: #03A9F4; font-weight: 600">Ambulance</span></h3>`)
+              
+               var view_data = new ViewData();
+               var remote_function = "ambulance/"+ state;
+
+               var url = view_data.ControllerRouteURL + remote_function;
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: 'json',
+                    data: false,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    beforeSend: function(jqXHR, settings) {
+                        
+                    },
+                    success: function(data) {
+                        console.log(data)
+                        var result = data
+                        $('#ambulanceStates').empty() 
+                        $('.ambulanceBack').show() 
+                        for(i = 0; i < result.length; i++){  
+                                var res = result[i].location
+                                var phone = result[i].phone
+                                var statesDiv = `<div class="states" style="display: flex;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" onchange="DialAmbulance(${phone})"  type="radio" name="ambulance" id="ambulance" value="${res}">
+                                                    <label class="form-check-label ml-3" for="ambulance">
+                                                        ${res}
+                                                    </label>
+                                                </div>
+                                                <p class="mb-0 ml-5">${phone}</p>
+                                            </div>`
+
+                                $('#ambulanceStates').append(statesDiv);
+
+                            }
+                    },  
+                    complete: function(jqXHR) {
+                    
+                    }
+                });
+         }
+
+           // Modal back button
+           function backAmbulance(){
+            $('.ambulanceHead').html(`<h3 style="color: #434343; line-height: 40px; font-weight: 800;">What State<br> are you? <span style="font-size: 16px; color: #03A9F4; font-weight: 600">Ambulance</span></h3>`)
+                GetStatesAmbulance()
+            }
+
+            // dial phone number selected functionality
+            function DialAmbulance(phone){
+                window.location = `tel:+234${phone}`
+            }
+
+    //  ------------ END OF AMBULANCE ZONE ----------------
+
+
+    // --- START OF LEGAL HELP ZONE ----- *********************
+    function GetStatesLegal(){
+             // populates the nigerian states
+             $.getJSON("states.json", function(data){
+                $('#legalStates').empty()  
+                $('.legalBack').hide()
+                for(i = 0; i < data.length; i++){
+                    var result = data[i]
+                    var statesDiv = `<div class="states">
+                                     <div class="form-check">
+                                        <input class="form-check-input" onchange="ChangeLegal()" type="radio" name="legal" id="legal" value="${result}">
+                                        <label class="form-check-label ml-3" for="legal" >
+                                            ${result}
+                                        </label>
+                                    </div>
+                                    </div>`
+
+                    $('#legalStates').append(statesDiv);
+
+                 }
+
+            }).fail(function(){
+                console.log("An error has occurred.");
+            });
+        }
+
+        function ChangeLegal(){
+            var state =  $("input[name='legal']:checked").val();
+               console.log(state)
+               $('.legalHead').html(`<h3 style="color: #434343; line-height: 40px; font-weight: 800;">Showing results<br> ${state} State <span style="font-size: 16px; color: #03A9F4; font-weight: 600">Legal</span></h3>`)
+              
+               var view_data = new ViewData();
+               var remote_function = "legalhelp/"+ state;
+
+               var url = view_data.ControllerRouteURL + remote_function;
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: 'json',
+                    data: false,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    beforeSend: function(jqXHR, settings) {
+                        
+                    },
+                    success: function(data) {
+                        console.log(data)
+                        var result = data
+                        $('#legalStates').empty() 
+                        $('.legalBack').show() 
+                        for(i = 0; i < result.length; i++){  
+                                var res = result[i].location
+                                var phone = result[i].phone
+                                var statesDiv = `<div class="states" style="display: flex;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" onchange="DialLegal(${phone})"  type="radio" name="legal" id="legal" value="${res}">
+                                                    <label class="form-check-label ml-3" for="legal">
+                                                        ${res}
+                                                    </label>
+                                                </div>
+                                                <p class="mb-0 ml-5">${phone}</p>
+                                            </div>`
+
+                                $('#legalStates').append(statesDiv);
+
+                            }
+                    },  
+                    complete: function(jqXHR) {
+                    
+                    }
+                });
+         }
+
+           // Modal back button
+           function backLegal(){
+            $('.legalHead').html(`<h3 style="color: #434343; line-height: 40px; font-weight: 800;">What State<br> are you? <span style="font-size: 16px; color: #03A9F4; font-weight: 600">Legal</span></h3>`)
+                GetStatesLegal()
+            }
+
+            // dial phone number selected functionality
+            function DialLegal(phone){
+                window.location = `tel:+234${phone}`
+            }
+
+    // END OF LEGAL HELP ZONE ----------------- *****************
+
+
+
+    // START OF FIRST AID ZONE ---------- *******************
+    function GetStatesAid(){
+             // populates the nigerian states
+             $.getJSON("states.json", function(data){
+                $('#aidStates').empty()  
+                $('.aidBack').hide()
+                for(i = 0; i < data.length; i++){
+                    var result = data[i]
+                    var statesDiv = `<div class="states">
+                                     <div class="form-check">
+                                        <input class="form-check-input" onchange="ChangeAid()" type="radio" name="aid" id="aid" value="${result}">
+                                        <label class="form-check-label ml-3" for="aid" >
+                                            ${result}
+                                        </label>
+                                    </div>
+                                    </div>`
+
+                    $('#aidStates').append(statesDiv);
+
+                 }
+
+            }).fail(function(){
+                console.log("An error has occurred.");
+            });
+        }
+
+        function ChangeAid(){
+            var state =  $("input[name='aid']:checked").val();
+               console.log(state)
+               $('.aidHead').html(`<h3 style="color: #434343; line-height: 40px; font-weight: 800;">Showing results<br> ${state} State <span style="font-size: 16px; color: #03A9F4; font-weight: 600">First AID</span></h3>`)
+              
+               var view_data = new ViewData();
+               var remote_function = "firstaid/"+ state;
+
+               var url = view_data.ControllerRouteURL + remote_function;
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: 'json',
+                    data: false,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    beforeSend: function(jqXHR, settings) {
+                        
+                    },
+                    success: function(data) {
+                        console.log(data)
+                        var result = data
+                        $('#aidStates').empty() 
+                        $('.aidBack').show() 
+                        for(i = 0; i < result.length; i++){  
+                                var res = result[i].location
+                                var phone = result[i].phone
+                                var statesDiv = `<div class="states" style="display: flex;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" onchange="DialAid(${phone})"  type="radio" name="aid" id="aid" value="${res}">
+                                                    <label class="form-check-label ml-3" for="aid">
+                                                        ${res}
+                                                    </label>
+                                                </div>
+                                                <p class="mb-0 ml-5">${phone}</p>
+                                            </div>`
+
+                                $('#aidStates').append(statesDiv);
+
+                            }
+                    },  
+                    complete: function(jqXHR) {
+                    
+                    }
+                });
+         }
+
+           // Modal back button
+           function backAid(){
+            $('.aidHead').html(`<h3 style="color: #434343; line-height: 40px; font-weight: 800;">What State<br> are you? <span style="font-size: 16px; color: #03A9F4; font-weight: 600">First AID</span></h3>`)
+                GetStatesAid()
+            }
+
+            // dial phone number selected functionality
+            function DialAid(phone){
+                window.location = `tel:+234${phone}`
+            }
+
+    // EMD OF FIRST AID ZONE --------------- ***************
+
+
+
+
+
+
+
+
         // Get map location
         function geolocation(){
             if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(function (position) {
-                console.log(position.coords.latitude)
-                console.log(position.coords.longitude)
                 getAddress(position.coords.latitude, position.coords.longitude)
                 })
             }else{
@@ -400,7 +778,7 @@
             },
             success: function(data)
             {
-                console.log(data)
+            
             },
             complete: function(jqXHR){
                   if(jqXHR.status == '401'){
