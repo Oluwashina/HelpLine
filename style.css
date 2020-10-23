@@ -307,4 +307,15 @@ padding: 50px 70px 30px 30px;
     .section-adjust{
         margin-top: 60px;
     }
+    .tell_heading{
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 50px;
+    }
+    .tell_text{
+        color: #2ECC71;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
