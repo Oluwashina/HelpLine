@@ -67,7 +67,7 @@
 
                <!-- list of all states -->
                <div id="states">
-               
+              
                </div>
             
     
@@ -415,22 +415,33 @@
                         var result = data
                         $('#states').empty() 
                         $('.back_icon').show() 
-                        for(i = 0; i < result.length; i++){  
-                                var res = result[i].location
-                                var phone = result[i].phone
-                                var statesDiv = `<div class="states" style="display: flex;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" onchange="Dial(${phone})"  type="radio" name="states" id="states" value="${res}">
-                                                    <label class="form-check-label ml-3" for="states">
-                                                        ${res}
-                                                    </label>
-                                                </div>
-                                                <p class="mb-0 ml-5">${phone}</p>
-                                            </div>`
+                        if(result.length == 0){
+                            $('#states').append('<p class="text-center mt-2" style="font-style: italic;">No results found</p>')
+                        }
+                        else{
 
-                                $('#states').append(statesDiv);
+                            for(i = 0; i < result.length; i++){
+                            console.log(result.length)
+                        
+                            var res = result[i].location
+                            var phone = result[i].phone
+                            var statesDiv = `<div class="states" style="display: flex;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" onchange="Dial(${phone})"  type="radio" name="states" id="states" value="${res}">
+                                                <label class="form-check-label ml-3" for="states">
+                                                    ${res}
+                                                </label>
+                                            </div>
+                                            <p class="mb-0 ml-5">${phone}</p>
+                                        </div>`
 
+                            $('#states').append(statesDiv);
+              
                             }
+
+
+                        }
+                       
                     },  
                     complete: function(jqXHR) {
                     
@@ -531,7 +542,11 @@
                         var result = data
                         $('#ambulanceStates').empty() 
                         $('.ambulanceBack').show() 
-                        for(i = 0; i < result.length; i++){  
+                        if(result.length == 0){
+                            $('#ambulanceStates').append('<p class="text-center mt-2" style="font-style: italic;">No results found</p>')
+                        }
+                        else{
+                            for(i = 0; i < result.length; i++){  
                                 var res = result[i].location
                                 var phone = result[i].phone
                                 var statesDiv = `<div class="states" style="display: flex;">
@@ -547,6 +562,8 @@
                                 $('#ambulanceStates').append(statesDiv);
 
                             }
+                        }
+                      
                     },  
                     complete: function(jqXHR) {
                     
@@ -620,7 +637,11 @@
                         var result = data
                         $('#legalStates').empty() 
                         $('.legalBack').show() 
-                        for(i = 0; i < result.length; i++){  
+                        if(result.length == 0){
+                            $('#legalStates').append('<p class="text-center mt-2" style="font-style: italic;">No results found</p>')
+                        }
+                        else{
+                            for(i = 0; i < result.length; i++){  
                                 var res = result[i].location
                                 var phone = result[i].phone
                                 var statesDiv = `<div class="states" style="display: flex;">
@@ -636,6 +657,8 @@
                                 $('#legalStates').append(statesDiv);
 
                             }
+                        }
+                     
                     },  
                     complete: function(jqXHR) {
                     
@@ -710,7 +733,11 @@
                         var result = data
                         $('#aidStates').empty() 
                         $('.aidBack').show() 
-                        for(i = 0; i < result.length; i++){  
+                        if(result.length == 0){
+                            $('#aidStates').append('<p class="text-center mt-2" style="font-style: italic;">No results found</p>')
+                        }
+                        else{
+                            for(i = 0; i < result.length; i++){  
                                 var res = result[i].location
                                 var phone = result[i].phone
                                 var statesDiv = `<div class="states" style="display: flex;">
@@ -726,6 +753,8 @@
                                 $('#aidStates').append(statesDiv);
 
                             }
+
+                        } 
                     },  
                     complete: function(jqXHR) {
                     
