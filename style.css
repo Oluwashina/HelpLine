@@ -254,6 +254,12 @@ padding: 50px 70px 30px 30px;
     color: #2ECC71;
     font-weight: 700;
 }
+.register-mobile{
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1); 
+    padding: 40px 30px 30px 30px;
+}
 .input-style{
     padding: 25px 20px;
     background: #F9F9F9;
