@@ -275,6 +275,12 @@ padding: 50px 70px 30px 30px;
 .login_pad{
     padding: 0px;
 }
+.login-mobile{
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1); 
+    padding: 40px 30px 30px 30px;
+}
 
 .secret {
     position: relative;
